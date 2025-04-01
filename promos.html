@@ -1,0 +1,74 @@
+<!-- Sección de título -->
+<section class="promos-title-section">
+    <h2 class="section-title">Promociones</h2>
+</section>
+
+<!-- Contenido de promociones -->
+<section class="promos-section">
+    <!-- Promoción 1: Descuento -->
+    <div class="promo-card discount" data-id="promo-1">
+        <div class="promo-image">
+            <img src="assets/img/promos/combo-familiar.jpg" alt="Combo Familiar">
+        </div>
+        <div class="promo-content">
+            <h3 class="promo-title">Combo Familiar</h3>
+            <p class="promo-subtitle">Perfecto para compartir</p>
+            <p class="promo-price">
+                <span class="old-price">S/ 120.00</span>
+                <span class="new-price">S/ 99.00</span>
+            </p>
+            <p class="promo-date">Válido hasta el 5 de abril</p>
+            <div id="discount-timer" class="promo-timer"></div>
+            <p class="promo-details">Incluye Lomo Saltado, Ceviche y 2 guarniciones a elección.</p>
+            <div class="add-to-cart flex flex-col gap-2">
+                <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                <button class="add-to-cart-btn" data-name="Combo Familiar" data-price="99.00" data-image="assets/img/promos/combo-familiar.jpg">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promoción 2: Solo por hoy -->
+    <div class="promo-card today" data-id="promo-2">
+        <div class="promo-image">
+            <img src="assets/img/promos/ceviche-duo.jpg" alt="Ceviche Dúo">
+        </div>
+        <div class="promo-content">
+            <h3 class="promo-title">Ceviche Dúo</h3>
+            <p class="promo-subtitle">¡Solo por hoy!</p>
+            <p class="promo-price">S/ 50.00</p>
+            <div id="today-timer" class="promo-timer">
+                <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+            </div>
+            <p class="promo-details">Ceviche clásico + bebida personal gratis.</p>
+            <div class="add-to-cart flex flex-col gap-2">
+                <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                <button class="add-to-cart-btn" data-name="Ceviche Dúo" data-price="50.00" data-image="assets/img/promos/ceviche-duo.jpg">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promoción 3: Oferta Especial -->
+    <div class="promo-card special" data-id="promo-3">
+        <div class="promo-image">
+            <img src="assets/img/promos/trio-marino.jpg" alt="Trío Marino">
+        </div>
+        <div class="promo-content">
+            <h3 class="promo-title">Trío Marino</h3>
+            <p class="promo-subtitle">Sabores del mar</p>
+            <p class="promo-price">
+                <span class="old-price">S/ 80.00</span>
+                <span class="new-price">S/ 65.00</span>
+            </p>
+            <p class="promo-date">Válido hasta el 15 de abril</p>
+            <div id="special-timer" class="promo-timer"></div>
+            <p class="promo-details">Ceviche, Arroz con Mariscos y Chicharrón de Pescado.</p>
+            <div class="add-to-cart flex flex-col gap-2">
+                <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                <button class="add-to-cart-btn" data-name="Trío Marino" data-price="65.00" data-image="assets/img/promos/trio-marino.jpg">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+</section>

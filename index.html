@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Digital - Restaurant Soledad</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Leaflet CSS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de navegación superior -->
+    <header class="top-nav shadow-lg">
+        <h1>Restaurant Soledad</h1>
+    </header>
+
+    <!-- Contenido principal -->
+    <main id="content"></main>
+
+    <!-- Barra de navegación inferior -->
+    <nav class="bottom-nav shadow-lg">
+        <button onclick="loadSection('inicio')"><i class="fas fa-home"></i></button>        
+        <button onclick="loadSection('carta')"><i class="fas fa-utensils"></i></button>
+        <button class="cart-btn" onclick="loadSection('carrito')">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count" class="cart-count">0</span>
+        </button>
+        <button onclick="loadSection('contacto')"><i class="fas fa-map-marker-alt"></i></button>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

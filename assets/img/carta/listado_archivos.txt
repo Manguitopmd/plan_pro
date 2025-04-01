@@ -1,0 +1,15 @@
+Listado de archivos en el directorio actual: 
+------------------------------------------ 
+ 
+arrozcabrito.jpg 
+arrozpato.jpg 
+caldocarnero.jpg 
+caldogallina.jpg 
+caldopata.jpg 
+ceviche.jpg 
+chicharronpescado.jpg 
+chitafrita.jpg 
+cuy.jpg 
+listado_archivos.txt 
+parajpg.bat 
+sudadopescado.jpg 

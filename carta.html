@@ -1,0 +1,428 @@
+<!-- Sección de título -->
+<section class="carta-title-section">
+    <h2 class="section-title">Nuestra Carta</h2>
+</section>
+
+<!-- Pestañas de categorías -->
+<section class="category-tabs-section">
+    <div class="category-tabs flex overflow-x-auto gap-3 px-4">
+        <button class="tab-btn active" data-category="todos">Todos</button>
+        <button class="tab-btn" data-category="sopas">Sopas</button>
+        <button class="tab-btn" data-category="guarniciones">Guarniciones</button>
+        <button class="tab-btn" data-category="criollos">Criollos</button>
+        <button class="tab-btn" data-category="marinos">Marinos</button>
+        <button class="tab-btn" data-category="carnes">Carnes</button>
+        <button class="tab-btn" data-category="arroces">Arroces</button>
+    </div>
+</section>
+
+<!-- Contenido de la carta -->
+<section class="carta-section">
+    <!-- Todos (se llenará dinámicamente con JS) -->
+    <div class="category" data-category="todos">
+        <h3 class="category-title">Todos</h3>
+        <div class="items flex flex-col gap-4"></div>
+    </div>
+
+    <!-- Sopas -->
+    <div class="category hidden" data-category="sopas">
+        <h3 class="category-title">Sopas</h3>
+        <div class="items flex flex-col gap-4">
+            <div class="item" data-id="sopa-1">
+                <img src="assets/img/carta/caldogallina.jpg" alt="Caldo de Gallina" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Caldo de Gallina</h4>
+                    <p class="price">S/ 15.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Caldo de Gallina" data-price="15.00" data-image="assets/img/carta/caldogallina.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="sopa-2">
+                <img src="assets/img/carta/caldopata.jpg" alt="Caldo de Pata de Res" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Caldo de Pata de Res</h4>
+                    <p class="price">S/ 18.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Caldo de Pata de Res" data-price="18.00" data-image="assets/img/carta/caldopata.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="sopa-3">
+                <img src="assets/img/carta/caldocarnero.jpg" alt="Caldo de Carnero" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Caldo de Carnero</h4>
+                    <p class="price">S/ 20.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Caldo de Carnero" data-price="20.00" data-image="assets/img/carta/caldocarnero.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Guarniciones -->
+    <div class="category hidden" data-category="guarniciones">
+        <h3 class="category-title">Guarniciones</h3>
+        <div class="items flex flex-col gap-4">
+            <div class="item" data-id="guarnicion-1">
+                <img src="assets/img/carta/chitafrita.jpg" alt="Chita Frita" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Chita Frita</h4>
+                    <p class="price">S/ 35.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Chita Frita" data-price="35.00" data-image="assets/img/carta/chitafrita.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="guarnicion-2">
+                <img src="assets/img/carta/plato-01.jpg" alt="Yuca Frita" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Yuca Frita</h4>
+                    <p class="price">S/ 10.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Yuca Frita" data-price="10.00" data-image="assets/img/carta/plato-01.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="guarnicion-3">
+                <img src="assets/img/carta/plato-02.jpg" alt="Papas Doradas" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Papas Doradas</h4>
+                    <p class="price">S/ 12.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Papas Doradas" data-price="12.00" data-image="assets/img/carta/plato-02.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Criollos -->
+    <div class="category hidden" data-category="criollos">
+        <h3 class="category-title">Criollos</h3>
+        <div class="items flex flex-col gap-4">
+            <div class="item" data-id="criollo-1">
+                <img src="assets/img/carta/arrozcabrito.jpg" alt="Arroz con Cabrito" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Arroz con Cabrito</h4>
+                    <p class="price">S/ 25.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Arroz con Cabrito" data-price="25.00" data-image="assets/img/carta/arrozcabrito.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="criollo-2">
+                <img src="assets/img/carta/arrozpato.jpg" alt="Arroz con Pato" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Arroz con Pato</h4>
+                    <p class="price">S/ 25.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Arroz con Pato" data-price="25.00" data-image="assets/img/carta/arrozpato.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="criollo-3">
+                <img src="assets/img/carta/cuy.jpg" alt="Cuy Guisado/Frito" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Cuy Guisado/Frito</h4>
+                    <p class="price">S/ 30.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Cuy Guisado/Frito" data-price="30.00" data-image="assets/img/carta/cuy.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="criollo-4">
+                <img src="assets/img/carta/plato-03.jpg" alt="Frito Trujillano" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Frito Trujillano</h4>
+                    <p class="price">S/ 25.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Frito Trujillano" data-price="25.00" data-image="assets/img/carta/plato-03.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Marinos -->
+    <div class="category hidden" data-category="marinos">
+        <h3 class="category-title">Marinos</h3>
+        <div class="items flex flex-col gap-4">
+            <div class="item" data-id="marino-1">
+                <img src="assets/img/carta/ceviche.jpg" alt="Ceviche Pesca del Día" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Ceviche Pesca del Día</h4>
+                    <p class="price">S/ 25.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Ceviche Pesca del Día" data-price="25.00" data-image="assets/img/carta/ceviche.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="marino-2">
+                <img src="assets/img/carta/chicharronpescado.jpg" alt="Chicharrón Pesca del Día" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Chicharrón Pesca del Día</h4>
+                    <p class="price">S/ 25.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Chicharrón Pesca del Día" data-price="25.00" data-image="assets/img/carta/chicharronpescado.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="marino-3">
+                <img src="assets/img/carta/sudadopescado.jpg" alt="Sudado Pesca del Día" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Sudado Pesca del Día</h4>
+                    <p class="price">S/ 25.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Sudado Pesca del Día" data-price="25.00" data-image="assets/img/carta/sudadopescado.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="marino-4">
+                <img src="assets/img/carta/plato-04.jpg" alt="Pescado Cabrilla" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Pescado Cabrilla</h4>
+                    <p class="price">S/ 30.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Pescado Cabrilla" data-price="30.00" data-image="assets/img/carta/plato-04.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="marino-5">
+                <img src="assets/img/carta/plato-05.jpg" alt="Pescado Suco" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Pescado Suco</h4>
+                    <p class="price">S/ 30.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Pescado Suco" data-price="30.00" data-image="assets/img/carta/plato-05.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="marino-6">
+                <img src="assets/img/carta/plato-06.jpg" alt="Pescado Ojo de Uva" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Pescado Ojo de Uva</h4>
+                    <p class="price">S/ 30.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Pescado Ojo de Uva" data-price="30.00" data-image="assets/img/carta/plato-06.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="marino-7">
+                <img src="assets/img/carta/plato-07.jpg" alt="Pescado Corvina" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Pescado Corvina</h4>
+                    <p class="price">S/ 35.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Pescado Corvina" data-price="35.00" data-image="assets/img/carta/plato-07.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carnes -->
+    <div class="category hidden" data-category="carnes">
+        <h3 class="category-title">Carnes</h3>
+        <div class="items flex flex-col gap-4">
+            <div class="item" data-id="carne-1">
+                <img src="assets/img/carta/plato-08.jpg" alt="Chuleta de Cerdo" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Chuleta de Cerdo</h4>
+                    <p class="price">S/ 22.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Chuleta de Cerdo" data-price="22.00" data-image="assets/img/carta/plato-08.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="carne-2">
+                <img src="assets/img/carta/plato-09.jpg" alt="Chicharrón de Cerdo" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Chicharrón de Cerdo</h4>
+                    <p class="price">S/ 20.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Chicharrón de Cerdo" data-price="20.00" data-image="assets/img/carta/plato-09.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="carne-3">
+                <img src="assets/img/carta/plato-10.jpg" alt="Hígado Encebollado" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Hígado Encebollado</h4>
+                    <p class="price">S/ 18.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Hígado Encebollado" data-price="18.00" data-image="assets/img/carta/plato-10.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="carne-4">
+                <img src="assets/img/carta/plato-11.jpg" alt="Churrasco" class="item-image()">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Churrasco</h4>
+                    <p class="price">S/ 30.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Churrasco" data-price="30.00" data-image="assets/img/carta/plato-11.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="carne-5">
+                <img src="assets/img/carta/plato-12.jpg" alt="Lomo Saltado" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Lomo Saltado</h4>
+                    <p class="price">S/ 25.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Lomo Saltado" data-price="25.00" data-image="assets/img/carta/plato-12.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="carne-6">
+                <img src="assets/img/carta/plato-13.jpg" alt="Pollo Saltado" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Pollo Saltado</h4>
+                    <p class="price">S/ 22.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Pollo Saltado" data-price="22.00" data-image="assets/img/carta/plato-13.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="carne-7">
+                <img src="assets/img/carta/plato-14.jpg" alt="Pollo a la Plancha" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Pollo a la Plancha</h4>
+                    <p class="price">S/ 22.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Pollo a la Plancha" data-price="22.00" data-image="assets/img/carta/plato-14.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="carne-8">
+                <img src="assets/img/carta/plato-15.jpg" alt="Milanesa" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Milanesa</h4>
+                    <p class="price">S/ 22.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Milanesa" data-price="22.00" data-image="assets/img/carta/plato-15.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="carne-9">
+                <img src="assets/img/carta/plato-16.jpg" alt="Chancho al Palo" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Chancho al Palo</h4>
+                    <p class="price">S/ 30.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Chancho al Palo" data-price="30.00" data-image="assets/img/carta/plato-16.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Arroces -->
+    <div class="category hidden" data-category="arroces">
+        <h3 class="category-title">Arroces</h3>
+        <div class="items flex flex-col gap-4">
+            <div class="item" data-id="arroz-1">
+                <img src="assets/img/carta/plato-17.jpg" alt="Arroz con Mariscos" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Arroz con Mariscos</h4>
+                    <p class="price">S/ 28.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Arroz con Mariscos" data-price="28.00" data-image="assets/img/carta/plato-17.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="arroz-2">
+                <img src="assets/img/carta/plato-18.jpg" alt="Chaufa de Mariscos" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Chaufa de Mariscos</h4>
+                    <p class="price">S/ 28.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Chaufa de Mariscos" data-price="28.00" data-image="assets/img/carta/plato-18.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="arroz-3">
+                <img src="assets/img/carta/plato-19.jpg" alt="Chaufa de Pollo" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Chaufa de Pollo</h4>
+                    <p class="price">S/ 22.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Chaufa de Pollo" data-price="22.00" data-image="assets/img/carta/plato-19.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="item" data-id="arroz-4">
+                <img src="assets/img/carta/plato-20.jpg" alt="Tallarín Saltado" class="item-image">
+                <div class="item-info flex justify-between items-center">
+                    <h4>Tallarín Saltado</h4>
+                    <p class="price">S/ 22.00</p>
+                </div>
+                <div class="add-to-cart flex flex-col gap-2">
+                    <input type="number" class="quantity" min="1" value="1" placeholder="Cantidad">
+                    <textarea class="notes" placeholder="Observaciones (opcional)"></textarea>
+                    <button class="add-to-cart-btn" data-name="Tallarín Saltado" data-price="22.00" data-image="assets/img/carta/plato-20.jpg">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

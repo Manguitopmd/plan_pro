@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Restaurant Soledad</title>
+</head>
+<body>
+    <!-- Sección de título -->
+    <section class="carrito-title-section">
+        <h2 class="section-title">Tu Carrito</h2>
+    </section>
+
+    <!-- Pasos del carrito -->
+    <section class="carrito-section">
+        <!-- Paso 1: Revisión del pedido -->
+        <div id="step-review" class="carrito-step">
+            <div id="cart-items" class="cart-items flex flex-col gap-4"></div>
+            <p id="cart-total" class="price">Total: S/ 0.00</p>
+            <div class="carrito-actions">
+                <button id="cart-clear" class="btn">Vaciar carrito</button>
+                <button id="cart-next" class="btn">Siguiente</button>
+            </div>
+        </div>
+
+        <!-- Paso 2: Método de pago -->
+        <div id="step-payment" class="carrito-step hidden">
+            <h3 class="step-title">Método de Pago</h3>
+            <div class="payment-options flex flex-col gap-4">
+                <label class="flex items-center gap-2">
+                    <input type="radio" name="payment" value="efectivo" checked> Efectivo
+                </label>
+                <label class="flex items-center gap-2">
+                    <input type="radio" name="payment" value="plin"> Plin
+                </label>
+                <label class="flex items-center gap-2">
+                    <input type="radio" name="payment" value="yape"> Yape
+                </label>
+            </div>
+
+            <!-- Contenedor dinámico para opciones adicionales -->
+            <div id="payment-details" class="mt-4">
+                <!-- Efectivo: Campo para indicar con cuánto paga -->
+                <div id="cash-details" class="payment-detail">
+                    <label for="cash-amount" class="block text-sm font-medium text-gray-700">¿Con cuánto pagas?</label>
+                    <input type="number" id="cash-amount" name="cash-amount" step="0.01" min="0" placeholder="Ej: 50.00" class="w-full p-2 border-2 border-gray-400 rounded-lg">
+                    <p class="text-sm text-gray-600 mt-1">Ingresa el monto para calcular tu vuelto.</p>
+                </div>
+
+                <!-- Plin/Yape: Solo QR -->
+                <div id="transfer-details" class="payment-detail hidden">
+                    <div id="transfer-output" class="mt-4 text-center">
+                        <div id="qr-output">
+                            <img id="qr-image" src="" alt="Código QR" class="mx-auto max-w-[200px] rounded-lg shadow-md">
+                            <p class="text-sm text-gray-600 mt-2">Descárgala para realizar el pago.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carrito-actions mt-4">
+                <button id="payment-back" class="btn">Volver</button>
+                <button id="payment-next" class="btn">Siguiente</button>
+            </div>
+        </div>
+
+        <!-- Paso 3: Detalles del pedido -->
+        <div id="step-details" class="carrito-step hidden">
+            <h3 class="step-title">Detalles del Pedido</h3>
+            <form id="order-form" class="order-form">
+                <div class="form-group">
+                    <label for="order-name">Nombre:</label>
+                    <input type="text" id="order-name" name="order-name" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="order-address">Dirección:</label>
+                    <input type="text" id="order-address" name="order-address" placeholder="Dirección de entrega" required>
+                </div>
+                <div class="form-group">
+                    <label for="delivery-method">Método de entrega:</label>
+                    <select id="delivery-method" name="delivery-method" class="w-full p-2 border-2 border-gray-400 rounded-lg">
+                        <option value="recojo">Recojo en local</option>
+                        <option value="delivery">Delivery</option>
+                    </select>
+                </div>
+                <div class="carrito-actions">
+                    <button id="details-back" class="btn" type="button">Volver</button>
+                    <button type="submit" class="btn">Enviar Pedido</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
