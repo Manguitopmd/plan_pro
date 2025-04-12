@@ -1,16 +1,26 @@
 /* Paleta de colores en variables CSS (Global) */
 :root {
     --fondo-navegacion: #8d1100;
-    --amarillo-destacado: #ffb000;
+    --amarillo-destacado: #ffc000;
     --texto-blanco: #ffffff;
     --rojo-vivo: #dd2209;
     --fondo-principal: #1d1d1d;
     --rojo-naranja: #ff3000;
-    --fondo-secundario: #f5e8c7;
+    --fondo-secundario: #4f0000;
     --fondo-botones: #ffb000;
     --fondo-botones-hover: #dd2209;
     --texto-negro: #333333;
     --texto-gris: #7f8c8d;
+    /* Nuevas variables para consistencia */
+    --fondo-modal: rgba(0, 0, 0, 0.6);
+    --amarillo-translucido: rgba(255, 176, 0, 0.1);
+    --rojo-translucido: rgba(221, 34, 9, 0.05);
+    --rojo-translucido-price: rgba(221, 34, 9, 0.1);
+    --blanco-translucido: rgba(255, 255, 255, 0.8);
+    --verde-whatsapp: #25D366;
+    --verde-whatsapp-hover: #20b354;
+    --sombra-suave: rgba(0, 0, 0, 0.1);
+    --sombra-fuerte: rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos generales (usados en todas las páginas) */
@@ -117,7 +127,7 @@ nav.bottom-nav {
 }
 
 .shadow-lg {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--sombra-fuerte);
 }
 
 .error-message {
@@ -128,7 +138,7 @@ nav.bottom-nav {
     border-radius: 15px;
     text-align: center;
     border: 3px solid var(--amarillo-destacado);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--sombra-suave);
 }
 
 .error-message h3 {
@@ -154,7 +164,7 @@ nav.bottom-nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: var(--fondo-modal);
     justify-content: center;
     align-items: center;
     z-index: 2000;
@@ -165,7 +175,7 @@ nav.bottom-nav {
     border-radius: 12px;
     max-width: 90%;
     width: 300px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--sombra-fuerte);
     padding: 1.5rem;
     text-align: center;
 }
@@ -199,7 +209,7 @@ nav.bottom-nav {
     transform: scale(1.05);
 }
 
-/* Modal (usado en contacto.html) */
+/* Modal (usado en contacto.html y carta.html) */
 .modal {
     display: none;
     position: fixed;
@@ -207,10 +217,14 @@ nav.bottom-nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: var(--fondo-modal);
     justify-content: center;
     align-items: center;
     z-index: 2000;
+}
+
+.modal.flex {
+    display: flex;
 }
 
 .modal-content {
@@ -218,7 +232,7 @@ nav.bottom-nav {
     border-radius: 12px;
     max-width: 90%;
     width: 100%;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--sombra-fuerte);
     overflow: hidden;
 }
 
@@ -237,7 +251,8 @@ nav.bottom-nav {
     border-bottom: 2px solid var(--amarillo-destacado);
 }
 
-#modal-message {
+#modal-message,
+#modal-description {
     color: var(--texto-negro);
     font-size: 1.1rem;
     line-height: 1.5;
@@ -279,6 +294,21 @@ nav.bottom-nav {
     transform: scale(1.05);
 }
 
+#modal-close {
+    background-color: var(--amarillo-destacado);
+    color: var(--texto-negro);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#modal-close:hover {
+    background-color: var(--fondo-botones-hover);
+    color: var(--texto-blanco);
+    transform: scale(1.05);
+}
+
 /* Estilos para index.html (inicio.html) */
 .slider {
     width: 100%;
@@ -313,7 +343,7 @@ nav.bottom-nav {
 }
 
 .section-title {
-    color: var(--rojo-vivo);
+    color: var(--amarillo-destacado);
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -321,7 +351,7 @@ nav.bottom-nav {
 
 .schedule-highlight {
     position: relative;
-    background-color: rgba(255, 176, 0, 0.1);
+    background-color: var(--amarillo-translucido);
     border: 2px dashed var(--amarillo-destacado);
     border-radius: 8px;
     padding: 1.5rem 1rem 1rem;
@@ -330,7 +360,7 @@ nav.bottom-nav {
 }
 
 .schedule-icon {
-    color: var(--rojo-vivo);
+    color: var(--amarillo-destacado);
     font-size: 2rem;
     position: absolute;
     top: -1.5rem;
@@ -339,7 +369,7 @@ nav.bottom-nav {
     background-color: var(--fondo-secundario);
     padding: 0.5rem;
     border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--sombra-suave);
     width: 2rem;
     height: 2rem;
     display: flex;
@@ -348,7 +378,7 @@ nav.bottom-nav {
 }
 
 .schedule-text {
-    color: var(--texto-negro);
+    color: var(--texto-blanco);
     font-size: 1.2rem;
     font-weight: 500;
     margin: 0;
@@ -374,7 +404,7 @@ nav.bottom-nav {
     color: var(--texto-negro);
     font-size: 1.5rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--sombra-suave);
 }
 
 .social-btn:hover {
@@ -419,13 +449,13 @@ nav.bottom-nav {
 }
 
 .whatsapp-btn {
-    background-color: #25D366;
+    background-color: var(--verde-whatsapp);
     color: var(--texto-blanco);
     margin-left: 0.5rem;
 }
 
 .whatsapp-btn:hover {
-    background-color: #20b354;
+    background-color: var(--verde-whatsapp-hover);
 }
 
 .reserve-button {
@@ -461,16 +491,17 @@ nav.bottom-nav {
 .about-section {
     padding: 1.5rem;
     text-align: center;
-    background-color: rgba(221, 34, 9, 0.05);
+    background-color: var(--rojo-translucido);
     border-radius: 10px;
     margin: 0 1rem 2rem;
 }
 
 .about-text {
-    color: var(--texto-negro);
+    color: var(--texto-blanco);
     font-size: 1.1rem;
     line-height: 1.6;
     margin-top: 1rem;
+    text-align: justify ;
 }
 
 /* Estilos para contacto.html */
@@ -480,7 +511,7 @@ nav.bottom-nav {
 }
 
 .contact-address {
-    color: var(--texto-negro);
+    color: var(--texto-blanco);
     font-size: 1.1rem;
     line-height: 1.6;
     margin: 0;
@@ -543,7 +574,7 @@ nav.bottom-nav {
 }
 
 .form-group label {
-    color: var(--texto-negro);
+    color: var(--texto-blanco);
     font-weight: 600;
     display: block;
     margin-bottom: 0.5rem;
@@ -572,15 +603,21 @@ nav.bottom-nav {
     opacity: 0.8;
 }
 
+
 /* Estilos para carta.html */
 .carta-title-section {
     padding: 1rem;
     text-align: center;
+    display: none; /* Seguimos ocultando el título principal */
 }
 
 .category-tabs-section {
     padding: 0.75rem 0;
-    background-color: rgba(221, 34, 9, 0.05);
+    background: var(--amarillo-destacado); /* Mantengo el fondo que te gustó */
+    box-shadow: var(--sombra-suave);
+    position: sticky;
+    top: 4rem; /* Fijo debajo del top-nav */
+    z-index: 900;
 }
 
 .category-tabs {
@@ -588,20 +625,21 @@ nav.bottom-nav {
 }
 
 .tab-btn {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--blanco-translucido);
     color: var(--texto-negro);
     padding: 0.75rem 1.25rem;
     font-size: 1.2rem;
     font-weight: 500;
     border-radius: 8px;
     border: 1px solid var(--texto-gris);
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
     white-space: nowrap;
 }
 
 .tab-btn:hover {
-    background-color: rgba(255, 176, 0, 0.2);
+    background-color: var(--amarillo-translucido);
     color: var(--rojo-vivo);
+    transform: scale(1.05);
 }
 
 .tab-btn.active {
@@ -612,7 +650,9 @@ nav.bottom-nav {
 }
 
 .carta-section {
-    padding: 0.75rem;
+    padding: 0.75rem; /* Reduje el padding superior para que no haya espacio extra */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .category {
@@ -620,23 +660,33 @@ nav.bottom-nav {
 }
 
 .category-title {
-    color: var(--rojo-vivo);
+    color: var(--amarillo-destacado);
     font-size: 1.6rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin: 1.5rem 0; /* Ajusté el margen para que esté al ras con los ítems */
     text-align: center;
-    display: none;
+    display: none; /* Oculto por defecto */
 }
 
 .category:not(.hidden) .category-title {
-    display: block;
+    display: block; /* Solo visible para la categoría activa */
+}
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
 }
 
 .item {
-    background-color: var(--texto-blanco);
+    background-color: var(--fondo-navegacion);
     border-radius: 8px;
     padding: 0.75rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.2s ease;
+}
+
+.item:hover {
+    transform: scale(1.02);
 }
 
 .item-image {
@@ -648,11 +698,14 @@ nav.bottom-nav {
 }
 
 .item-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 0.5rem;
 }
 
 .item h4 {
-    color: var(--texto-negro);
+    color: var(--texto-blanco);
     font-size: 1.1rem;
     font-weight: 600;
     margin: 0;
@@ -665,13 +718,51 @@ nav.bottom-nav {
     color: var(--rojo-vivo);
     font-size: 1.3rem;
     font-weight: 700;
-    background-color: rgba(221, 34, 9, 0.1);
+    background-color: var(--texto-blanco);
     padding: 0.2rem 0.6rem;
     border-radius: 4px;
 }
 
+.item-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.view-details-btn {
+    background-color: transparent;
+    color: var(--blanco-translucido);
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.view-details-btn:hover {
+    color: var(--amarillo-destacado);
+}
+
+.add-to-cart-btn {
+    background-color: var(--fondo-botones);
+    color: var(--texto-negro);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--fondo-botones-hover);
+    color: var(--texto-blanco);
+    transform: scale(1.05);
+}
+
 .add-to-cart {
     margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .quantity,
@@ -696,22 +787,6 @@ nav.bottom-nav {
     height: 60px;
 }
 
-.add-to-cart-btn {
-    background-color: var(--fondo-botones);
-    color: var(--texto-negro);
-    padding: 0.5rem;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 100%;
-}
-
-.add-to-cart-btn:hover {
-    background-color: var(--fondo-botones-hover);
-    color: var(--texto-blanco);
-    transform: scale(1.05);
-}
-
 /* Estilos para carrito.html */
 .carrito-title-section {
     padding: 1rem;
@@ -726,7 +801,7 @@ nav.bottom-nav {
     background-color: var(--texto-blanco);
     border-radius: 8px;
     padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--sombra-suave);
 }
 
 .step-title {
@@ -857,7 +932,7 @@ nav.bottom-nav {
     border-radius: 12px;
     padding: 2rem;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--sombra-suave);
     max-width: 90%;
     margin: 2rem auto;
 }
@@ -890,4 +965,3 @@ nav.bottom-nav {
     color: var(--texto-blanco);
     transform: scale(1.05);
 }
-

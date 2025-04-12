@@ -302,12 +302,20 @@ function scrollToReserve() {
     }, 100);
 }
 
+
+
+
+
+
+
+
 /* Funciones para carta.html */
 function initCarta() {
     const categories = document.querySelectorAll('.category');
     const tabButtons = document.querySelectorAll('.tab-btn');
     const allItemsContainer = document.querySelector('.category[data-category="todos"] .items');
 
+    // Clonar ítems en la categoría "todos"
     categories.forEach(category => {
         if (category.getAttribute('data-category') !== 'todos') {
             const items = category.querySelectorAll('.item');
@@ -317,6 +325,7 @@ function initCarta() {
         }
     });
 
+    // Manejo de pestañas
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
             const category = button.getAttribute('data-category');
@@ -331,11 +340,12 @@ function initCarta() {
         });
     });
 
+    // Añadir al carrito
     document.querySelectorAll('.add-to-cart-btn').forEach(button => {
         button.addEventListener('click', () => {
             const item = button.closest('.item');
             const name = button.getAttribute('data-name');
-            const price = parseFloat(button.getAttribute('data-price'));
+            const price = parseFloat(button.getAttribute('data-price')) || 0;
             const image = button.getAttribute('data-image');
             const quantity = parseInt(item.querySelector('.quantity').value) || 1;
             const notes = item.querySelector('.notes').value.trim();
@@ -352,6 +362,56 @@ function initCarta() {
             item.querySelector('.quantity').value = 1;
             item.querySelector('.notes').value = '';
         });
+    });
+
+    // Botón de vista (ojito) para mostrar detalles
+    document.querySelectorAll('.view-details-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const item = button.closest('.item');
+            const name = button.getAttribute('data-name');
+            const description = button.getAttribute('data-description') || 'Delicioso plato preparado con ingredientes frescos.';
+
+            showItemDetails(name, description);
+        });
+    });
+}
+
+/* Función para mostrar detalles del ítem en un modal */
+function showItemDetails(name, description) {
+    let modal = document.getElementById('modal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'modal';
+        modal.className = 'modal';
+        modal.innerHTML = `
+            <div class="modal-content">
+                <div id="modal-content">
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-description"></p>
+                    <button id="modal-close">Cerrar</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+
+    const modalTitle = modal.querySelector('#modal-title');
+    const modalDescription = modal.querySelector('#modal-description');
+    const modalClose = modal.querySelector('#modal-close');
+
+    modalTitle.textContent = name;
+    modalDescription.textContent = description;
+    modal.classList.add('flex');
+
+    modalClose.onclick = () => {
+        modal.classList.remove('flex');
+    };
+
+    // Cerrar modal al hacer clic fuera del contenido
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('flex');
+        }
     });
 }
 
